@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> User Login</title>
+ <link rel="stylesheet" href="login.css"> 
+</head>
+<body>
+<div id ="message"></div>
+
+<div class="login-container">
+
+        <h2>Login</h2>
+        <form action="LoginServlet" method="post">
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <input type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="register.html">Register</a></p>
+    </div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get("success") === "1") {
+        document.getElementById("message").innerHTML =
+            "<p style='color: green; font-weight: bold; text-align:center;'> Registration Successful! Please login.</p>";
+    }
+
+    if (params.get("error") === "1") {
+        document.getElementById("message").innerHTML =
+            "<p style='color: red; font-weight: bold; text-align:center;'>❌ Invalid email or password.</p>";
+    }
+
+    if (params.get("error") === "2") {
+        document.getElementById("message").innerHTML =
+            "<p style='color: red; font-weight: bold; text-align:center;'>⚠️ Something went wrong. Try again.</p>";
+    }
+
+    // Clean URL
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.pathname);
+    }
+</script>
+</body>
+</html>

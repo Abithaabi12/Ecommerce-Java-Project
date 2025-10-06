@@ -1,0 +1,23 @@
+# Ignore DB config
+config/db.properties
+
+# Ignore compiled Java files
+*.class
+bin/
+target/
+
+# Ignore Eclipse-specific files
+.settings/
+*.log
+*.classpath
+*.project
+
+# Ignore video files
+*.mp4
+
+# Ignore MySQL connector test files
+src/main/webapp/WEB-INF/lib/mysql-connector-j-*/**/src/test/
+Step 2 — Open Git Bash
+Navigate to your project folder (ecommerce-webapp) in File Explorer.
+
+Right-click → Git Bash Here → opens terminal in the folder.

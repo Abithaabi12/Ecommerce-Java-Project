@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f6f8;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #4db3ab;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.cart-button {
+    background-color: white;
+    color: #4db3ab;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cart-button:hover {
+    background-color: #e7e7e7;
+}
+
+/* Product Container */
+.product-container {
+    width: 90%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 8px 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.product-card .desc {
+    font-size: 14px;
+    color: #666;
+    height: 40px;
+    overflow: hidden;
+}
+
+.price {
+    color: #4db3ab;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* Form */
+.cart-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.qty-input {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.add-btn {
+    background-color: #4db3ab;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #3a8f87;
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-img {
+        height: 150px;
+    }
+
+    .cart-form {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .qty-input {
+        width: 100%;
+    }
+
+    .add-btn {
+        width: 100%;
+    }
+}
