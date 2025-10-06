@@ -4,16 +4,16 @@ A simple e-commerce demo with registration, login, product listing, and cart.
 
 ## Screenshots
 ### Registration Page
-![Registration Page](./screenshots/registration.png)
+![Registration Page](./ScreenShots/Registration Page.png)
 
 ### Login Page
-![Login Page](./screenshots/login.png)
+![Login Page](./ScreenShots/Login Page.png)
 
 ### Products Page
-![Products Page](./screenshots/products.png)
+![Products Page](./ScreenShots/Products Page.png)
 
 ### Cart Page
-![Cart Page](./screenshots/cart.png)
+![Cart Page](./ScreenShots/Cart Page.png)
 
 ## Demo Video
 Watch here → [Click here](https://youtu.be/cunfeQQJUyc)
